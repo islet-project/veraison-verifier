@@ -488,14 +488,16 @@ dependencies = [
 
 [[package]]
 name = "ear"
-version = "0.1.2"
-source = "git+https://github.com/veraison/rust-ear#13962e36225f85dcc3bad8ac7047a306b1350baf"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1134a8dbb5ad666d26d82da83d12b71703b16f2ed5433d5ba24d8cfea2b66d96"
 dependencies = [
  "base64 0.22.1",
  "ciborium",
  "cose-rust",
  "hex",
  "jsonwebtoken",
+ "lazy_static",
  "openssl",
  "phf",
  "serde",
@@ -1087,11 +1089,11 @@ dependencies = [
 
 [[package]]
 name = "lazy_static"
-version = "1.4.0"
+version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
+checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
 dependencies = [
- "spin 0.5.2",
+ "spin",
 ]
 
 [[package]]
@@ -1719,7 +1721,7 @@ dependencies = [
  "cfg-if",
  "getrandom",
  "libc",
- "spin 0.9.8",
+ "spin",
  "untrusted",
  "windows-sys 0.52.0",
 ]
@@ -1747,6 +1749,7 @@ dependencies = [
 [[package]]
 name = "rust-rsi"
 version = "0.1.0"
+source = "git+https://github.com/islet-project/rust-rsi#a6f46ca785221ef376869890df9b7906d7a2f7f1"
 dependencies = [
  "bindgen",
  "cc",
@@ -2003,12 +2006,6 @@ dependencies = [
  "libc",
  "windows-sys 0.52.0",
 ]
-
-[[package]]
-name = "spin"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 
 [[package]]
 name = "spin"

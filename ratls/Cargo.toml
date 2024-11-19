@@ -20,5 +20,5 @@ rustls-pemfile = "*"
 sha2 = "*"
 simple_asn1 = "*"
 x509-certificate = "*"
-rust-rsi = { path = "../../rust-rsi" }
+rust-rsi = { git = "https://github.com/islet-project/rust-rsi" }
 rustls-webpki = "*"
