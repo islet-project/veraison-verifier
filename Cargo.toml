@@ -6,11 +6,11 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-log = "*"
+log = "0.4"
 ratls = { git = "https://github.com/islet-project/ratls" }
-reqwest = { version = "*", default-features = false, features = ["blocking", "json", "rustls-tls"] }
-serde = { version = "*", features = ["derive", "alloc"] }
-serde_json = { version = "*", features = ["alloc"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive", "alloc"] }
+serde_json = { version = "1.0", features = ["alloc"] }
 ear = "0.3.0"
 rust-rsi = { git = "https://github.com/islet-project/rust-rsi" }
-base64 = { version = "*", features = ["alloc"] }
+base64 = { version = "0.22", features = ["alloc"] }
