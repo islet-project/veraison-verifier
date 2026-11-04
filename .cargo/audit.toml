@@ -1,0 +1,18 @@
+# cargo-audit configuration for the veraison-verifier workspace.
+# NOTE: cargo-audit reads `.cargo/audit.toml` only from the directory it is
+# invoked in (and its parent directories). The identical ignore list in the
+# ratls repository does NOT apply here, even though rsa arrives via ratls.
+
+[advisories]
+ignore = [
+    # RUSTSEC-2023-0071 (Marvin): RSA PKCS#1 v1.5 decryption timing side-channel.
+    # Transitively required by `ratls`, which uses the `rsa` crate ONLY to
+    # generate ephemeral RSA-2048 keypairs and export public/PKCS#8 keys for
+    # self-signed RA-TLS certificates. Neither this crate nor any code path
+    # pulled in from it performs RSA decryption of attacker-supplied data.
+    # No fixed stable upgrade exists for `rsa` (0.9.10 is latest; fix only in
+    # the unreleased 0.10 line), matching the documented decision taken in the
+    # ratls repository. Re-evaluate if rsa 0.10+ ships stable or if ratls drops
+    # the crate (ECDSA cert keys).
+    "RUSTSEC-2023-0071",
+]
